@@ -11,31 +11,17 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 public class SubChapter {
+
     private String name;
-    private final List<Image> imageList = new ArrayList<>();
-    private final List<Paragraph> paragraphList = new ArrayList<>();
-    private final List<Table> tableList = new ArrayList<>();
+    private final List<Element> elementsList = new ArrayList<>();
 
-    void print(String name) {
-        System.out.println("Name of the subchapter: " + name);
-    }
-
-    public void createNewParagraph(String s) {
-        paragraphList.add(new Paragraph(s));
-    }
-
-    public void createNewImage(String s) {
-        imageList.add(new Image(s));
-    }
-
-    public void createNewTable(String s) {
-        tableList.add(new Table(s));
+    public void createNewElement(Element element) {
+        elementsList.add(element);
     }
 
     void print() {
         System.out.println("Subchapter: " + this.name);
-        paragraphList.forEach(p -> p.print());
-        imageList.forEach(i -> i.print());
-        tableList.forEach(t -> t.print());
+        elementsList.forEach(e -> e.print());
     }
+
 }

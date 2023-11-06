@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Chapter {
+
     private String name;
     private final List<SubChapter> subChapterList = new ArrayList<>();
 
@@ -29,4 +30,5 @@ public class Chapter {
     public SubChapter getSubChapter(int indexSubChapter) {
         return subChapterList.get(indexSubChapter);
     }
+
 }

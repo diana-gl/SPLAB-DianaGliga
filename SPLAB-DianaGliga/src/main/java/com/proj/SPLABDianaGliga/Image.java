@@ -7,10 +7,13 @@ import lombok.Setter;
 @Setter
 @Getter
 @AllArgsConstructor
-public class Image {
+public class Image implements Element {
+
     private String imageName;
 
-    void print() {
+    @Override
+    public void print() {
         System.out.println("Image with name: " + imageName);
     }
+
 }

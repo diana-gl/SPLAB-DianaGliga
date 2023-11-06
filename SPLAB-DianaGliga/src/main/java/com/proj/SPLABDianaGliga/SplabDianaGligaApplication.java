@@ -18,14 +18,14 @@ public class SplabDianaGligaApplication {
 		int indexSubChapterOneOne = chp1.createSubChapter("Subcapitolul 1.1");
 		SubChapter scOneOne = chp1.getSubChapter(indexSubChapterOneOne);
 
-		scOneOne.createNewParagraph("Paragraph 1");
-		scOneOne.createNewParagraph("Paragraph 2");
-		scOneOne.createNewParagraph("Paragraph 3");
-		scOneOne.createNewImage("Image 1");
-		scOneOne.createNewParagraph("Paragraph 4");
-		scOneOne.createNewTable("Table 1");
-		scOneOne.createNewParagraph("Paragraph 5");
-
+		scOneOne.createNewElement(new Paragraph("Paragraph 1"));
+		scOneOne.createNewElement(new Paragraph("Paragraph 2"));
+		scOneOne.createNewElement(new Paragraph("Paragraph 3"));
+		scOneOne.createNewElement(new Image("Image 1"));
+		scOneOne.createNewElement(new Paragraph("Paragraph 4"));
+		scOneOne.createNewElement(new Table("Table 1"));
+		scOneOne.createNewElement(new Paragraph("Paragraph 5"));
+		
 		scOneOne.print();
 	}
 

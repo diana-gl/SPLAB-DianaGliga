@@ -7,10 +7,13 @@ import lombok.Setter;
 @Setter
 @Getter
 @AllArgsConstructor
-public class Paragraph {
+public class Paragraph implements Element {
+
     private String text;
 
-    void print() {
+    @Override
+    public void print() {
         System.out.println("Paragraph: " + text);
     }
+
 }

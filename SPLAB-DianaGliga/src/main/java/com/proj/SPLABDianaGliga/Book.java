@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Book {
+
     private String title;
     private Author author;
     private List<Chapter> chapterList = new ArrayList<>();
@@ -30,5 +31,6 @@ public class Book {
     public Chapter getChapter(int indexChapter) {
         return chapterList.get(indexChapter);
     }
+
 }
 

@@ -8,9 +8,11 @@ import lombok.Setter;
 @Getter
 @AllArgsConstructor
 public class Author {
+
     private String name;
 
     void print(String name) {
         System.out.println("Author name: " + name);
     }
+
 }

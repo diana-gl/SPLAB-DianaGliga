@@ -7,9 +7,13 @@ import lombok.Setter;
 @Setter
 @Getter
 @AllArgsConstructor
-public class Table {
+public class Table implements Element {
+
     private String title;
-    void print() {
+
+    @Override
+    public void print() {
         System.out.println("Table with Title: " + title);
     }
+
 }

@@ -11,7 +11,7 @@ public class Author {
 
     private String name;
 
-    void print(String name) {
+    void print() {
         System.out.println("Author name: " + name);
     }
 

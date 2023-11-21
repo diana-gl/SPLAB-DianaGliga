@@ -4,12 +4,22 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.concurrent.TimeUnit;
+
 @Setter
 @Getter
-@AllArgsConstructor
 public class Image implements Element {
 
     private String imageName;
+
+    Image(String name) {
+        imageName = name;
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     @Override
     public void add(Element element) {

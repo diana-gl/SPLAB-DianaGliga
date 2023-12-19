@@ -1,6 +1,7 @@
 package com.proj.SPLABDianaGliga;
 
 import lombok.AllArgsConstructor;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.ArrayList;
@@ -15,6 +16,10 @@ public class Section implements Element {
     public Section(String title) {
         this.title = title;
         this.elementList = new ArrayList<>();
+    }
+
+    String getTitle() {
+        return this.title;
     }
 
     @Override
@@ -35,6 +40,15 @@ public class Section implements Element {
     @Override
     public void print() {
         System.out.println(title);
-        elementList.forEach(e -> e.print());
+        //elementList.forEach(e -> e.print());
+
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitSection(this);
+        elementList.forEach(element -> {
+            element.accept(visitor);
+        });
     }
 }

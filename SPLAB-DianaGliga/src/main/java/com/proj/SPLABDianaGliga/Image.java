@@ -31,4 +31,9 @@ public class Image implements Element {
         System.out.println("Image with name: " + imageName);
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitImage(this);
+    }
+
 }

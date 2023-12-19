@@ -31,4 +31,9 @@ public class Table implements Element {
         System.out.println("Table with Title: " + title);
     }
 
+    @Override
+    public void accept(Visitor visitor) {
+        visitor.visitTable(this);
+    }
+
 }
